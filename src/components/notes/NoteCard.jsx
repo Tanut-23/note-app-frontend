@@ -34,14 +34,14 @@ const NoteCard = ({ note, onDelete }) => {
 
         {/* Tags */}
         <div className="mt-3 flex flex-wrap gap-2">
-          {note.tags.map((tag, index) => (
+          {note.tags?.map((tag, index) => (
             <span
               key={index}
               className="bg-blue-100 text-blue-600 text-xs font-medium px-2 py-1 rounded-full"
             >
               #{tag}
             </span>
-          ))}
+          )) ?? null}
         </div>
       </div>
 
